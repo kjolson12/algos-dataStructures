@@ -159,9 +159,5 @@ class SinglyLinkedList {
 
 const list = new SinglyLinkedList();
 list.push('hello');
-//||
-//\/
 list.push('world');
-//||
-//\/
 list.push('haha');
