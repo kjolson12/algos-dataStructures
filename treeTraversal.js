@@ -1,4 +1,4 @@
-// breath first search tree traversal
+// breath first search  and depth first search tree traversal
 
 class Node {
     constructor(val) {
@@ -73,6 +73,36 @@ class BinarySearchTree {
             if (removed.left) queue.push(removed.left);
             if (removed.right) queue.push(removed.right);
         }
+
+        return data;
+    }
+
+    //depth first search
+    dfs() {
+        const data = [];
+
+        const helper = node => {
+            data.push(node.val);
+            if (node.left) helper(node.left);
+            if (node.right) helper(node.right);
+        }
+
+        helper(this.root);
+
+        return data;
+    }
+
+    //depth first search post order
+    dfsPostOrder() {
+        const data = [];
+
+        const helper = node => {
+            if (node.left) helper(node.left);
+            if (node.right) helper(node.right);
+            data.push(node.val);
+        }
+
+        helper(this.root);
 
         return data;
     }
