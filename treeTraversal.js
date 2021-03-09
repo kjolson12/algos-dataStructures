@@ -1,4 +1,4 @@
-// breath first search  and depth first search tree traversal
+// breadth first search  and depth first search tree traversal
 
 class Node {
     constructor(val) {
@@ -60,7 +60,7 @@ class BinarySearchTree {
         return `no node at value: ${val}`;
     }
 
-    //breath first search
+    //breadth first search
     bfs() {
         const data = [];
         const queue = [];
